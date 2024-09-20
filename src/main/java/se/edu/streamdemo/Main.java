@@ -13,12 +13,13 @@ public class Main {
         ArrayList<Task> tasksData = dataManager.loadData();
 
         System.out.println("Printing all data ...");
-        printAllData(tasksData);
+        printDataWithStreams(tasksData);
 
         System.out.println("Printing deadlines ...");
-        printDeadlines(tasksData);
+        printDeadlinesUsingStreams(tasksData);
 
-        System.out.println("Total number of deadlines: " + countDeadlines(tasksData));
+        System.out.println("Total number of deadlines (iterating): " + countDeadlines(tasksData));
+        System.out.println("Total number of deadlines (using streams): " + countDeadlinesUsingStreams(tasksData));
 
     }
 
